@@ -70,3 +70,4 @@
                 const dy = mouseY - particle.element.getBoundingClientRect().top - particle.element.offsetHeight / 2;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
+                if (distance < 100) {
