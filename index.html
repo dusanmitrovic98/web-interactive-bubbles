@@ -66,3 +66,4 @@
                 particle.element.style.transform = `translate(${particle.vx}px, ${particle.vy}px)`;
 
                 // Particle interaction with mouse cursor
+                const dx = mouseX - particle.element.getBoundingClientRect().left - particle.element.offsetWidth / 2;
