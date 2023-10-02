@@ -73,3 +73,4 @@
                 if (distance < 100) {
                     // Apply force to particles within a certain radius of the cursor
                     const force = 1 - distance / 100; // Strength of the force
+                    particle.vx += force * (dx / 100);
