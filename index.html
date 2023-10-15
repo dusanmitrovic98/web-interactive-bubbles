@@ -61,7 +61,7 @@
             const mouseX = event.clientX;
             const mouseY = event.clientY;
 
-            /* particles.forEach((particle) => {
+            particles.forEach((particle) => {
                 // Particle movement based on velocity
                 particle.element.style.transform = `translate(${particle.vx}px, ${particle.vy}px)`;
 
@@ -70,13 +70,13 @@
                 const dy = mouseY - particle.element.getBoundingClientRect().top - particle.element.offsetHeight / 2;
                 const distance = Math.sqrt(dx * dx + dy * dy); */
 
-                // if (distance < 100) {
-                    // Apply force to particles within a certain radius of the cursor
-                    // const force = 1 - distance / 2; // Strength of the force
-                    // particle.vx += /* force */ 1  * (dx / 100);
-                    // particle.vy += /* force */ 1 * (dy / 100);
-                // }
-            // });
+                 if (distance < 100) {
+                     Apply force to particles within a certain radius of the cursor
+                     const force = 1 - distance / 2; // Strength of the force
+                     particle.vx +=  force  * (dx / 100);
+                     particle.vy +=  force  * (dy / 100);
+                 }
+             });
 
             requestAnimationFrame(updateParticles);
         }
